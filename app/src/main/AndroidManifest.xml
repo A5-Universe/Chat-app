@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.a5universe.chatapp">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChatApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.MeetingActivity"
+            android:exported="false"/>
+        <activity
+            android:name="org.jitsi.meet.sdk.JitsiMeetActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Activity.ChatActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Activity.SignupActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Activity.GroupActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.ChatAppSplash">
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

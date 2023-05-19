@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Chat App</string>
+
+    <!--    For Package Logo-->
+    <string name="PackageName">From \n A5 Universe</string>
+
+
+    <!--    navigation drawer item-->
+    <string name="chat">Chat</string>
+    <string name="groups">Groups</string>
+    <string name="meet">Meet</string>
+    <string name="setting">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="viewProfile">View Profile</string>
+    <string name="myProfile">My Profile</string>
+
+<!--    meeting -->
+    <string name="meeting">Meeting</string>
+    <string name="meetingDescription">Create Room Name and share the code with your \n friends to start video call or enter the code of the \n room you want to join </string>
+    <string name="join">Join / Create</string>
+    <string name="share">Share</string>
+    <!--    test.   -->
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+
+    <!--    Login and signup    -->
+    <string name="login">Log In</string>
+    <string name="signup">Sign Up</string>
+    <string name="name">User Name</string>
+    <string name="password">Password</string>
+    <string name="save">Save</string>
+
+    <!--    dialogue string     -->
+    <string name="dialogue_text">Are you sure \n you want to Logout ?</string>
+
+</resources>
