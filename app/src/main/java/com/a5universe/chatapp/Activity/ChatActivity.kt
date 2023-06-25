@@ -31,8 +31,12 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var msgRecyclerView: RecyclerView
     var messagesArrayList = ArrayList<Messages>()
     lateinit var adapter: MessagesAdapter
-    var sImage: String? = null
-    var rImage: String? = null
+    companion object {
+        var sImage: String? = null
+        var rImage: String? = null
+    }
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,8 +51,8 @@ class ChatActivity : AppCompatActivity() {
         receiverImage = intent.getStringExtra("ReceiverImage")
         receiverUID = intent.getStringExtra("uid")
 
-        Picasso.get().load(receiverImage).into(binding.profileImg)
-        binding.receiverName.text = receiverName
+        Picasso.get().load(receiverImage).into(binding.friendImg)
+        binding.friendName.text = receiverName
 
 
         val linearLayoutManager = LinearLayoutManager(this)
@@ -57,6 +61,7 @@ class ChatActivity : AppCompatActivity() {
         msgRecyclerView = binding.msgRecyclerView // Updated variable assignment
 
         msgRecyclerView.layoutManager = linearLayoutManager
+        //adapter = MessagesAdapter(this, messagesArrayList,sImage)
         adapter = MessagesAdapter(this, messagesArrayList)
         msgRecyclerView.adapter = adapter
 
@@ -71,14 +76,14 @@ class ChatActivity : AppCompatActivity() {
         // image set on chat function..
         reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                sImage = snapshot.child("imageUri").getValue(String::class.java)?.toString()
+                sImage = snapshot.child("imgUri").value.toString()
                 rImage = receiverImage
             }
 
             override fun onCancelled(error: DatabaseError) {}
         })
 
-// for chat
+        // for chat
         chatReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 messagesArrayList.clear() // for clear message
@@ -121,7 +126,13 @@ class ChatActivity : AppCompatActivity() {
             }
 }
 
+    binding.btnBack.setOnClickListener {
+        onBackPressed()
+        }
 
+    }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

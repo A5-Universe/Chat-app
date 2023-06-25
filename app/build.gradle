@@ -53,8 +53,8 @@ dependencies {
 
     //Firebase
     implementation 'com.google.firebase:firebase-auth-ktx:22.0.0'
-    implementation 'com.google.firebase:firebase-database-ktx:20.2.1'
-    implementation 'com.google.firebase:firebase-storage-ktx:20.2.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.2.1'
 
     //responsive size sdp
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
@@ -64,6 +64,10 @@ dependencies {
 
     //picasso library
     implementation 'com.squareup.picasso:picasso:2.8'
+
+    //circle image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 
     //use this dependencies for jitsi meet handbook
     //Note-version will be update for this website

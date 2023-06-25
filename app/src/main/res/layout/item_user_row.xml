@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -11,19 +11,16 @@
         android:orientation="horizontal"
         android:background="@drawable/item_shape">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/userImage"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/icon"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/user1"
             android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginRight="@dimen/_20sdp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:civ_border_width="@dimen/_1sdp"
+            app:civ_border_color="@color/background" />
 
             <TextView
                 android:id="@+id/userName"
@@ -32,9 +29,10 @@
                 android:text="@string/name"
                 android:fontFamily="@font/sansation_bold"
                 android:textColor="@color/background"
-                android:textSize="@dimen/_18ssp"/>
+                android:textSize="@dimen/_18ssp"
+                android:layout_marginTop="@dimen/_15sdp"/>
 
-        </LinearLayout>
+        >
 
 
     </LinearLayout>

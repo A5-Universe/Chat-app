@@ -41,9 +41,9 @@ class UserAdapter (private val chatFragment: ChatFragment,
         }
 
         holder.userName.text = users.name
-        Picasso.get().load(users.imgUri).placeholder(R.drawable.sample_image).into(holder.userImage)
+        Picasso.get().load(users.imgUri).placeholder(R.drawable.user1).into(holder.userImage)
 
-//         for chat activity
+            //intent passing for chat activity
             holder.itemView.setOnClickListener {
             val intent = Intent(chatFragment.requireContext(), ChatActivity::class.java)
             intent.putExtra("name", users.name)

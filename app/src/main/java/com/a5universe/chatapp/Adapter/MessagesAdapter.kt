@@ -3,17 +3,22 @@ package com.a5universe.chatapp.Adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.a5universe.chatapp.Activity.ChatActivity
+import com.a5universe.chatapp.Activity.ChatActivity.Companion.rImage
+import com.a5universe.chatapp.Activity.ChatActivity.Companion.sImage
 import com.a5universe.chatapp.Model.Messages
 import com.a5universe.chatapp.R
 import com.google.firebase.auth.FirebaseAuth
+import com.squareup.picasso.Picasso
+import de.hdodenhof.circleimageview.CircleImageView
 
 
-class MessagesAdapter(private val chatActivity: ChatActivity,
-                      private val messagesArrayList: ArrayList<Messages>) :
+class MessagesAdapter(
+    private val chatActivity: ChatActivity,
+    private val messagesArrayList: ArrayList<Messages>
+) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
@@ -45,11 +50,11 @@ class MessagesAdapter(private val chatActivity: ChatActivity,
         when (holder) {
             is SenderViewHolder -> {
                 holder.txtMessages.text = messages.message
-//                Picasso.get().load(sImage).into(holder.imageView)
+                Picasso.get().load(sImage).into(holder.imageView)
             }
             is ReceiverViewHolder -> {
                 holder.txtMessages.text = messages.message
-//                Picasso.get().load(rImage).into(holder.imageView)
+                Picasso.get().load(rImage).into(holder.imageView)
             }
         }
 
@@ -68,22 +73,22 @@ class MessagesAdapter(private val chatActivity: ChatActivity,
 
     class SenderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var imageView: ImageView
+        var imageView: CircleImageView
         var txtMessages: TextView
 
         init {
-            imageView = itemView.findViewById(R.id.profileImg)
+            imageView = itemView.findViewById(R.id.senderImg)
             txtMessages = itemView.findViewById(R.id.txtMessages)
         }
     }
 
     class ReceiverViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var imageView: ImageView
+        var imageView: CircleImageView
         var txtMessages: TextView
 
         init {
-            imageView = itemView.findViewById(R.id.profileImg)
+            imageView = itemView.findViewById(R.id.receiverImg)
             txtMessages = itemView.findViewById(R.id.txtMessages)
         }
     }

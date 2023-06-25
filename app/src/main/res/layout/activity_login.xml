@@ -40,12 +40,14 @@
         android:orientation="vertical">
 
 
-        <ImageView
-            android:id="@+id/profileImg"
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="@dimen/_80sdp"
             android:layout_height="@dimen/_80sdp"
-            app:srcCompat="@drawable/icon"
-            android:layout_margin="@dimen/_15sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/icon"
+            android:scaleType="centerCrop"
+            app:civ_border_width="@dimen/_1sdp"
+            app:civ_border_color="@color/background"/>
 
 
         <EditText

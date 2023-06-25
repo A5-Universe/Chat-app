@@ -22,27 +22,31 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // firebase initialization
         auth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
 
+        //progress bar
         progressDialog = ProgressDialog(this).apply {
             setTitle("Please Wait...")
             setMessage("Just a moment...")
         }
 
+        //If user not login
         if (auth.currentUser != null) {
             startActivity(Intent(this, HomeActivity::class.java))
         }
 
-        //signup text click event
+        // method for signup text
         SignupTxtWork()
 
-        // login button click event
-        SignUpBtnWork()
+        // method for login button
+        loginButtonWork()
 
 
     }
 
-    private fun SignUpBtnWork() {
+    private fun loginButtonWork() {
         binding.btnLogin.setOnClickListener {
             progressDialog.show()
             val email = binding.loginEmail.text.toString()
@@ -50,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
 
             if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                 progressDialog.dismiss()
-                Toast.makeText(this, "Invalid Data ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Invalid Data", Toast.LENGTH_SHORT).show()
             }
             else if (!email.matches(emailPattern)) {
                 progressDialog.dismiss()

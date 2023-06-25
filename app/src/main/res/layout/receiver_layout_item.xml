@@ -4,17 +4,18 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/profileImg"
-        android:layout_width="@dimen/_25sdp"
-        android:layout_height="@dimen/_25sdp"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/receiverImg"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_gravity="center"
         android:layout_marginStart="@dimen/_5sdp"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginEnd="@dimen/_5sdp"
         android:layout_marginBottom="@dimen/_5sdp"
-        app:srcCompat="@drawable/sample_image" />
+        android:src="@drawable/user1"
+        app:civ_border_color="@color/background"
+        app:civ_border_width="@dimen/_1sdp" />
 
     <TextView
         android:id="@+id/txtMessages"
@@ -25,11 +26,11 @@
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_marginEnd="@dimen/_5sdp"
         android:layout_marginBottom="@dimen/_5sdp"
-        android:layout_toRightOf="@+id/profileImg"
+        android:layout_toRightOf="@+id/receiverImg"
         android:background="@drawable/receiver_shape"
         android:padding="@dimen/_7sdp"
         android:text="@string/app_name"
-        android:textColor="@color/black"
+        android:textColor="@color/background"
         android:textStyle="bold" />
 
 </RelativeLayout>
