@@ -50,7 +50,7 @@
             android:layout_width="@dimen/_90sdp"
             android:layout_height="@dimen/_90sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:src="@drawable/icon"
+            android:src="@drawable/user1"
             android:scaleType="centerCrop"
             app:civ_border_width="@dimen/_1sdp"
             app:civ_border_color="@color/background"/>

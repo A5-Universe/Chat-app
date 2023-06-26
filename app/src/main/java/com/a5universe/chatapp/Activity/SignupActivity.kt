@@ -9,8 +9,10 @@ import android.provider.MediaStore
 import android.text.TextUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.net.toUri
+
 import com.a5universe.chatapp.Model.Users
+
+import com.a5universe.chatapp.R.*
 import com.a5universe.chatapp.databinding.ActivitySignupBinding
 import com.google.android.exoplayer2.util.Log
 import com.google.android.gms.tasks.Task
@@ -29,7 +31,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var storage: FirebaseStorage
     private lateinit var progressDialog: ProgressDialog
     private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.[a-z]+".toRegex()
-    private lateinit var imageUri: Uri
+    private  var imageUri: Uri? = null
     private var imgURI: String? = null
     private val PICK_IMAGE_REQUEST = 102
 
@@ -75,10 +77,12 @@ class SignupActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null) {
-            imageUri = data.data!!
-            // Use the selected image URI as needed (e.g., display in an ImageView)
-            binding.regImage.setImageURI(imageUri)
+
+        if (requestCode == PICK_IMAGE_REQUEST) {
+            if (data != null) {
+                imageUri = data.data!!
+                binding.regImage.setImageURI(imageUri)
+            }
         }
     }
 
@@ -106,8 +110,9 @@ class SignupActivity : AppCompatActivity() {
                     val reference: DatabaseReference = database.reference.child("user").child(auth.uid!!)
                     val storageReference: StorageReference = storage.reference.child("upload").child(auth.uid!!)
 
+                    // if image selected this is execute
                     if (imageUri != null) {
-                        storageReference.putFile(imageUri).addOnCompleteListener { task ->
+                        storageReference.putFile(imageUri!!).addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 storageReference.downloadUrl.addOnSuccessListener { uri ->
                                     imgURI = uri.toString()
@@ -125,8 +130,9 @@ class SignupActivity : AppCompatActivity() {
                                 }
                             }
                         }
-
-                    } else {
+                    }
+                    // if not image select default image is execute
+                    else {
                         imgURI = "https://firebasestorage.googleapis.com/v0/b/a5-chat-app.appspot.com/o/user.png?alt=media&token=ab8059c6-a92e-4b63-b459-4d76e8e7566c"
                         val user = Users(auth.uid, name, email, password, imgURI )
                         reference.setValue(user).addOnCompleteListener { task ->
