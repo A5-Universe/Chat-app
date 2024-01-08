@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".Activity.SplashScreen">
+    tools:context=".ui.splash.SplashScreen">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -24,9 +24,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center"
             android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/app_name"
             android:textColor="@color/icon_color"
             android:textSize="@dimen/_25sdp"

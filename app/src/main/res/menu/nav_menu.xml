@@ -12,28 +12,29 @@
             android:title="@string/chat"/>
 
         <item
-            android:id="@+id/nav_groups"
+            android:id="@+id/nav_connect"
             android:icon="@drawable/group"
-            android:title="@string/groups"/>
+            android:title="@string/connect"/>
 
         <item
             android:id="@+id/nav_meet"
             android:icon="@drawable/meet"
             android:title="@string/meet"/>
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/news"
+            android:title="@string/news"/>
 
         <item
             android:id="@+id/nav_setting"
             android:icon="@drawable/setting"
             android:title="@string/setting"/>
 
-        <item android:title="">
-            <menu>
-                <item
-                    android:id="@+id/nav_logout"
-                    android:title="@string/logout"
-                    android:icon="@drawable/logout"/>
-            </menu>
-        </item>
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/logout"
+            android:icon="@drawable/logout"/>
+
 
     </group>
 

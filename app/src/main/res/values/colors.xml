@@ -15,8 +15,8 @@
     <color name="light_purple">#EE7CFF</color>
 
 
-    <color name="offline_color">#FF3B3B</color>
-    <color name="online_color">#08E353</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#08E353</color>
 
 
 

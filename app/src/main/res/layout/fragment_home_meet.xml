@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.meet.HomeMeetFragment"
+    android:background="@color/light_purple">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_450sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:background="@drawable/page_shape"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/groupImg"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon"
+            app:civ_border_color="@color/light_purple"
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_15sdp"
+            android:text="@string/meetingDescription"
+            android:textAlignment="center"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/roomCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/edit_text_shape"
+            android:gravity="center_horizontal"
+            android:hint="Room Name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:textColor="@color/icon_color"
+            android:textColorHint="@color/icon_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnCreate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_login_shape"
+                android:text="@string/create"
+                android:textColor="@color/icon_color"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnJoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_login_shape"
+                android:text="@string/join"
+                android:textColor="@color/icon_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btnJoin"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="@dimen/_15sdp"-->
+        <!--            android:layout_marginTop="@dimen/_15sdp"-->
+        <!--            android:layout_marginRight="@dimen/_15sdp"-->
+        <!--            android:background="@drawable/btn_login_shape"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="@string/join"-->
+        <!--            android:textColor="@color/icon_color"-->
+        <!--            android:textSize="@dimen/_14sdp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/btn_login_shape"
+            android:gravity="center"
+            android:text="@string/share"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.SignupActivity"
+    tools:context=".ui.authentication.signup.SignupActivity"
     android:background="@color/light_purple">
 
     <RelativeLayout
@@ -13,14 +13,6 @@
         android:layout_height="@dimen/_50sdp"
         android:id="@+id/toolbar"
         android:background="@drawable/top_bar_shape">
-        <ImageView
-            android:id="@+id/btnBack"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/back"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_margin="@dimen/_15sdp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
@@ -55,7 +47,6 @@
             app:civ_border_width="@dimen/_1sdp"
             app:civ_border_color="@color/background"/>
 
-
         <TextView
             android:id="@+id/txtProfile"
             android:layout_width="wrap_content"
@@ -75,7 +66,7 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginRight="@dimen/_15sdp"
             android:background="@drawable/edit_text_shape"
-            android:hint="User Name"
+            android:hint="@string/user_name"
             android:inputType="textPersonName"
             android:padding="@dimen/_10sdp"
             android:textColor="@color/icon_color"
@@ -89,7 +80,7 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginRight="@dimen/_15sdp"
             android:background="@drawable/edit_text_shape"
-            android:hint="E mail"
+            android:hint="@string/e_mail"
             android:inputType="textEmailAddress"
             android:padding="@dimen/_10sdp"
             android:textColor="@color/icon_color"
@@ -97,7 +88,6 @@
 
         <EditText
             android:id="@+id/regPass"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_15sdp"
@@ -105,7 +95,7 @@
             android:layout_marginEnd="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_15sdp"
             android:background="@drawable/edit_text_shape"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:padding="@dimen/_10sdp"
             android:textColor="@color/icon_color"
@@ -163,7 +153,7 @@
                 android:layout_margin="@dimen/_15sdp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_gmail_shape"
-                android:text="Google"
+                android:text="@string/google"
                 android:textColor="@color/icon_color"
                 android:textStyle="bold" />
 
@@ -173,11 +163,9 @@
                 android:layout_margin="@dimen/_15sdp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_gmail_shape"
-                android:text="Phone"
+                android:text="@string/phone"
                 android:textColor="@color/icon_color"
                 android:textStyle="bold" />
-
-
         </LinearLayout>
 
     </LinearLayout>
@@ -200,8 +188,6 @@
             android:textColor="@color/icon_color"
             android:gravity="center"
             />
-
-
     </LinearLayout>
 
 </RelativeLayout>

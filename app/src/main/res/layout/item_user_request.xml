@@ -1,0 +1,61 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/item_shape">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/senderImage"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/user1"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:civ_border_width="@dimen/_1sdp"
+            app:civ_border_color="@color/background"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <TextView
+            android:id="@+id/senderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:fontFamily="@font/sansation_bold"
+            android:textColor="@color/background"
+            android:textSize="@dimen/_18ssp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_toEndOf="@id/senderImage"/>
+
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/accept"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            />
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_toStartOf="@id/btnAccept"
+            android:background="@drawable/decline"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_20sdp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

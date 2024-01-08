@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.HomeActivity"
-    android:background="@color/background"
+    tools:context=".ui.home.HomeActivity"
+    android:background="@color/icon_color"
     android:id="@+id/drawerLayout"
     tools:openDrawer="start"
     android:fitsSystemWindows="true">
@@ -51,16 +51,18 @@
                 app:civ_border_width="@dimen/_1sdp"
                 app:civ_border_color="@color/white" />
 
-            <ImageView
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_30sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:src="@drawable/search" />
+<!--            <ImageView-->
+<!--                android:id="@+id/searchIcon"-->
+<!--                android:layout_width="@dimen/_20sdp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:layout_marginEnd="@dimen/_30sdp"-->
+<!--                android:layout_marginBottom="@dimen/_10sdp"-->
+<!--                android:src="@drawable/search"-->
+<!--                android:visibility="gone" />-->
+<!--            &lt;!&ndash; Add SearchView here &ndash;&gt;-->
+
 
         </RelativeLayout>
 
@@ -69,7 +71,7 @@
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_below="@id/topToolbar" />
 

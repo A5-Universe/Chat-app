@@ -4,15 +4,17 @@
     package="com.a5universe.chatapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
-
 
     <application
         android:allowBackup="true"
@@ -25,42 +27,45 @@
         android:theme="@style/Theme.ChatApp"
         tools:targetApi="31">
         <activity
-            android:name=".Activity.MeetingActivity"
-            android:exported="false"/>
+            android:name=".ui.group.groupActivity.GroupInfoActivity"
+            android:exported="false" />
         <activity
-            android:name="org.jitsi.meet.sdk.JitsiMeetActivity" />
+            android:name=".ui.group.groupActivity.GroupCreateActivity"
+            android:exported="false" />
         <activity
-            android:name=".Activity.ProfileActivity"
-            android:exported="false"/>
+            android:name=".ui.group.groupActivity.GroupChatActivity"
+            android:exported="false" />
         <activity
-            android:name=".Activity.ChatActivity"
-            android:exported="false"/>
+            android:name="org.jitsi.meet.sdk.JitsiMeetActivity"
+            android:screenOrientation="fullSensor" />
+<!--            android:icon="@drawable/video_call"-->
         <activity
-            android:name=".Activity.LoginActivity"
-            android:exported="false"/>
+            android:name=".ui.authentication.profile.ProfileActivity"
+            android:exported="false" />
         <activity
-            android:name=".Activity.SignupActivity"
-            android:exported="false"/>
+            android:name=".ui.chat.chatActivity.ChatActivity"
+            android:exported="false" />
         <activity
-            android:name=".Activity.GroupActivity"
-            android:exported="false"/>
+            android:name=".ui.authentication.login.LoginActivity"
+            android:exported="false" />
         <activity
-            android:name=".Activity.HomeActivity"
+            android:name=".ui.authentication.signup.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.HomeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity.SplashScreen"
+            android:name=".ui.splash.SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.ChatAppSplash">
             <intent-filter>
-
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-
             </intent-filter>
         </activity>
     </application>

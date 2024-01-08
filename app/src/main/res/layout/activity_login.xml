@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.LoginActivity"
+    tools:context=".ui.authentication.login.LoginActivity"
     android:background="@color/light_purple">
 
 
@@ -58,7 +58,7 @@
             android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginRight="@dimen/_15sdp"
             android:background="@drawable/edit_text_shape"
-            android:hint="E mail"
+            android:hint="@string/e_mail"
             android:inputType="textEmailAddress"
             android:padding="@dimen/_10sdp"
             android:textColor="@color/icon_color"
@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Forgot Password"
+            android:text="@string/forgot_password"
             android:textColor="@color/light_purple"
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
@@ -112,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Create New account. "
+                android:text="@string/create_new_account"
                 android:textColor="@color/light_purple"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold" />
@@ -122,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:textColor="#A900FE"
                 android:textSize="@dimen/_18ssp"
                 android:textStyle="bold" />
@@ -140,7 +140,7 @@
                 android:layout_margin="@dimen/_15sdp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_gmail_shape"
-                android:text="Google"
+                android:text="@string/google"
                 android:textColor="@color/icon_color"
                 android:textStyle="bold" />
 
@@ -150,11 +150,9 @@
                 android:layout_margin="@dimen/_15sdp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_gmail_shape"
-                android:text="Phone"
+                android:text="@string/phone"
                 android:textColor="@color/icon_color"
                 android:textStyle="bold" />
-
-
         </LinearLayout>
 
     </LinearLayout>
@@ -177,11 +175,6 @@
             android:textColor="@color/icon_color"
             android:gravity="center"
             />
-
-
     </LinearLayout>
-
-
-
 
 </RelativeLayout>

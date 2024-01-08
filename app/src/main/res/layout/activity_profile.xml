@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ProfileActivity"
+    tools:context=".ui.authentication.profile.ProfileActivity"
     android:background="@color/light_purple">
 
     <RelativeLayout
@@ -102,7 +102,7 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_15sdp"
             android:background="@drawable/edit_text_shape"
-            android:hint="Password"
+            android:hint="Password change coming soon"
             android:inputType="textPassword"
             android:padding="@dimen/_10sdp"
             android:textColor="@color/icon_color"
@@ -116,7 +116,7 @@
             android:layout_marginEnd="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_15sdp"
             android:background="@drawable/edit_text_shape"
-            android:hint="Phone no"
+            android:hint="Phone no coming soon"
             android:inputType="number"
             android:padding="@dimen/_10sdp"
             android:textColor="@color/icon_color"

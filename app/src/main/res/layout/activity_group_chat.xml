@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.group.groupActivity.GroupChatActivity"
+    android:orientation="vertical"
+    android:background="@color/icon_color">
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/toolBar"
+        android:background="@drawable/top_bar_shape">
+
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/back"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp" />
+
+        <!-- Group image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/groupImage"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/user1"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_toEndOf="@+id/btnBack"
+            app:civ_border_width="@dimen/_1sdp"
+            app:civ_border_color="@color/white" />
+
+        <!-- Group name and options -->
+        <LinearLayout
+            android:id="@+id/groupInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/groupImage">
+
+            <TextView
+                android:id="@+id/groupName"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:fontFamily="@font/sansation_bold"
+                android:gravity="center"
+                android:text="@string/group_name"
+                android:textColor="@color/icon_color"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_15sdp"/>
+            <TextView
+                android:id="@+id/groupStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sansation_bold"
+                android:gravity="center"
+                android:text="@string/group_info"
+                android:textColor="@color/icon_color"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="-5dp"/>
+
+        </LinearLayout>
+
+        <!-- Menu and call buttons -->
+        <ImageView
+            android:id="@+id/btnMenu"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:background="@drawable/menu"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+<!--        <ImageView-->
+<!--            android:id="@+id/btnCall"-->
+<!--            android:layout_width="@dimen/_15sdp"-->
+<!--            android:layout_height="@dimen/_15sdp"-->
+<!--            android:background="@drawable/voice_call"-->
+<!--            android:layout_marginTop="@dimen/_15sdp"-->
+<!--            android:layout_marginBottom="@dimen/_15sdp"-->
+<!--            android:layout_marginEnd="@dimen/_70sdp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true" />-->
+<!--        <ImageView-->
+<!--            android:id="@+id/btnVideo"-->
+<!--            android:layout_width="@dimen/_20sdp"-->
+<!--            android:layout_height="@dimen/_20sdp"-->
+<!--            android:background="@drawable/video_call"-->
+<!--            android:layout_marginTop="@dimen/_15sdp"-->
+<!--            android:layout_marginBottom="@dimen/_15sdp"-->
+<!--            android:layout_marginEnd="@dimen/_40sdp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true" />-->
+    </RelativeLayout>
+
+    <!-- RecyclerView for messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvGroupMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBar"
+        android:layout_above="@id/bottomBar"/>
+
+    <!-- Bottom bar for typing and sending messages -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@null">
+
+        <!-- More options button -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- More options icon -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnAttach"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:cardCornerRadius="@dimen/_360sdp"
+                app:cardBackgroundColor="@color/background"
+                android:layout_margin="@dimen/_5sdp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/add" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Message input -->
+            <EditText
+                android:id="@+id/edtTextMsg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                android:background="@drawable/shape_dialogue"
+                android:gravity="center"
+                android:hint="@string/write_messages"
+                android:paddingLeft="@dimen/_25sdp"
+                android:paddingRight="@dimen/_25sdp"
+                android:textColor="@color/background"
+                android:textColorHint="@color/background" />
+
+            <!-- Send button -->
+            <ImageView
+                android:id="@+id/btnSend"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/btn_send" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
