@@ -34,17 +34,17 @@
             android:layout_toEndOf="@id/senderImage"/>
         <Button
             android:id="@+id/btnDelete"
-            android:layout_width="@dimen/_35sdp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
             android:layout_alignParentEnd="true"
             android:textColor="@color/icon_color"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
             android:background="@drawable/delete"/>
         <Button
             android:id="@+id/btnChat"
-            android:layout_width="@dimen/_35sdp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
             android:layout_alignParentEnd="true"
             android:textColor="@color/icon_color"
             android:layout_centerVertical="true"

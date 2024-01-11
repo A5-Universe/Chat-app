@@ -35,8 +35,8 @@
 
         <Button
             android:id="@+id/btnAccept"
-            android:layout_width="@dimen/_35sdp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_alignParentEnd="true"
             android:background="@drawable/accept"
             android:layout_centerVertical="true"
@@ -45,8 +45,8 @@
 
         <Button
             android:id="@+id/btnDecline"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
             android:layout_toStartOf="@id/btnAccept"
             android:background="@drawable/decline"
             android:layout_centerVertical="true"

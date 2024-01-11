@@ -38,6 +38,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_alignParentEnd="true"
             android:text="ADD"
+            android:textAlignment="center"
             android:textColor="@color/icon_color"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/_10sdp"
